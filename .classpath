@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/scala-2.10/classes" path="src/main/scala"/>
+	<classpathentry kind="src" output="target/scala-2.10/classes" path="src/main/java"/>
+	<classpathentry kind="src" output="target/scala-2.10/test-classes" path="src/test/scala"/>
+	<classpathentry kind="src" output="target/scala-2.10/test-classes" path="src/test/java"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Kam/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.2.0.jar" sourcepath="C:/Users/Kam/.m2/repository/com/typesafe/akka/akka-actor_2.10/2.2.0/akka-actor_2.10-2.2.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kam/.ivy2/cache/com.typesafe/config/bundles/config-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kam/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Kam/.ivy2/cache/junit/junit/jars/junit-4.8.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
