@@ -11,6 +11,7 @@ import model.estate.EstateFee
 import model.estate.EstateBasicInfo
 import model.DomainAlberletHu
 import org.apache.commons.lang.StringEscapeUtils
+import model.estate.EstateAddress
 
 /**
  * WebPageParser for alberlet.hu domain pages
@@ -50,6 +51,7 @@ class ParserAlberletHu(webPage: WebPage[DomainAlberletHu]) extends WebPageParser
       url = webPage.url,
       fee = Some(EstateFee(rentalFee = rentalFee, depositFee = depositFee, utilitiesFee = utilitiesFee, commonFee = commonFee)),
       basicInfo = Some(EstateBasicInfo(area = area, roomsCount = roomsCount, halfRoomsCount = halfRoomsCount, floor = floor, description = Some(description))),
+      address = Some(EstateAddress(fullAddress = address, city = city, district = Some(district), address = Some(street), country = None)),
       images = images
     )
 

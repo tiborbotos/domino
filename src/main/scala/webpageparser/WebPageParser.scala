@@ -22,10 +22,10 @@ trait WebPageParser[+DOMAIN <: Domain] {
  */
 object WebPageParser {
   def parserForPage[DOMAIN <: Domain](page: WebPage[DOMAIN]):Option[WebPageParser[DOMAIN]] = {
-    if (page.getClass() == classOf[WebPage[DomainAlberletHu]]) {
-      return Some(new ParserAlberletHu(page.asInstanceOf[WebPage[DomainAlberletHu]]).asInstanceOf[WebPageParser[DOMAIN]])
+    page.url.path match {
+      case url:String if (url == DomainAlberletHu.path) =>
+        Some(new ParserAlberletHu(page.asInstanceOf[WebPage[DomainAlberletHu]]).asInstanceOf[WebPageParser[DOMAIN]])
+      case _ => None
     }
-    
-    None
   }
 }
