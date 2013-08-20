@@ -19,7 +19,7 @@ import model.estate.EstateAddress
 class ParserAlberletHu(webPage: WebPage[DomainAlberletHu]) extends WebPageParser[DomainAlberletHu] {
 
   lazy val page = webPage.html
-  
+
   def parse(): Option[Estate[DomainAlberletHu]] = {
     hasRealEstate match {
       case false => None
@@ -69,7 +69,8 @@ class ParserAlberletHu(webPage: WebPage[DomainAlberletHu]) extends WebPageParser
       val m3 = m.group(3);
       val url = new Url(path = "http://www.alberlet.hu" + m1, label = m3);
 
-      result.append(url)
+      if (isValid(url))
+        result.append(url)
     }
 
     result.toList

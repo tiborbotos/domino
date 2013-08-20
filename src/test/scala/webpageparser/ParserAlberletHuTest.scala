@@ -90,6 +90,18 @@ class ParserAlberletHuTest {
     assertEquals(true, estate.url.urlActive)
   }
 
+  @Test
+  def testRead03() = {
+    val urlCount = 47
+    val urlPath = "http://www." + RandomStringUtils.randomAlphabetic(5) + ".com";
+
+    val parserResult = parseEstate(path + "alberlethu_03.html", urlPath)
+    val urlList = parserResult._2
+    val estateO = parserResult._1
+
+    assertEquals(urlCount, urlList.size)
+    assertFalse(estateO.isDefined)  
+  }
   
   def parseEstate(filePath: String, urlPath: String): (Option[Estate[DomainAlberletHu]], List[Url]) = {
     val file = new File(filePath)
