@@ -1,0 +1,133 @@
+[info] Updating {file:/C:/Programs/eclipse_scala/workspace/domino-testweb/}default-7c1dca...
+[debug] :: resolving dependencies :: domino-testweb#domino-testweb_2.10;1.0
+[debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom]
+[debug] 	validate = true
+[debug] 	refresh = false
+[debug] resolving dependencies for configuration 'compile'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[info] Resolving org.scala-lang#scala-library;2.10.2 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.2 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.2
+[debug] 	local: revision in cache: org.scala-lang#scala-library;2.10.2
+[debug] 	found org.scala-lang#scala-library;2.10.2 in sbt-chain
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->default(compile)]
+[info] Resolving commons-lang#commons-lang;2.6 ...
+[debug] sbt-chain: Checking cache for: dependency: commons-lang#commons-lang;2.6 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: commons-lang#commons-lang;2.6
+[debug] 	local: revision in cache: commons-lang#commons-lang;2.6
+[debug] 	found commons-lang#commons-lang;2.6 in sbt-chain
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->master]
+[debug] resolving dependencies for configuration 'runtime'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [runtime]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->master]
+[debug] resolving dependencies for configuration 'test'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [test]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [runtime]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->default(compile)]
+[info] Resolving junit#junit;4.8.1 ...
+[debug] sbt-chain: Checking cache for: dependency: junit#junit;4.8.1 {test=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: junit#junit;4.8.1
+[debug] 	local: revision in cache: junit#junit;4.8.1
+[debug] 	found junit#junit;4.8.1 in sbt-chain
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->master]
+[debug] resolving dependencies for configuration 'provided'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [provided]
+[debug] resolving dependencies for configuration 'optional'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [optional]
+[debug] resolving dependencies for configuration 'compile-internal'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile-internal]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->master]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [optional]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [provided]
+[debug] resolving dependencies for configuration 'runtime-internal'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [runtime-internal]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [runtime]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->master]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [optional]
+[debug] resolving dependencies for configuration 'test-internal'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [test-internal]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [test]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [runtime]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->commons-lang#commons-lang;2.6 [compile->master]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->default(compile)]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->runtime]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->compile]
+[debug] == resolving dependencies domino-testweb#domino-testweb_2.10;1.0->junit#junit;4.8.1 [test->master]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [optional]
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [provided]
+[debug] resolving dependencies for configuration 'plugin'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [plugin]
+[debug] resolving dependencies for configuration 'sources'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [sources]
+[debug] resolving dependencies for configuration 'docs'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [docs]
+[debug] resolving dependencies for configuration 'pom'
+[debug] == resolving dependencies for domino-testweb#domino-testweb_2.10;1.0 [pom]
+[debug] 	resolved ivy file produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\domino-testweb\domino-testweb_2.10\1.0\resolved.xml.xml
+[debug] :: downloading artifacts ::
+[debug] 	[NOT REQUIRED] commons-lang#commons-lang;2.6!commons-lang.jar
+[debug] 	[NOT REQUIRED] junit#junit;4.8.1!junit.jar
+[debug] :: resolution report :: resolve 26ms :: artifacts dl 1ms
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 compile produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-compile.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 runtime produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-runtime.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 test produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-test.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 provided produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-provided.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 optional produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-optional.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 compile-internal produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-compile-internal.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 runtime-internal produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-runtime-internal.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 test-internal produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-test-internal.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 plugin produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-plugin.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 sources produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-sources.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 docs produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-docs.xml
+[debug] 	report for domino-testweb#domino-testweb_2.10;1.0 pom produced in C:\Programs\eclipse_scala\workspace\domino-testweb\target\resolution-cache\reports\domino-testweb-domino-testweb_2.10-pom.xml
+[debug] 	resolve done (26ms resolve - 1ms download)
+[info] Done updating.
