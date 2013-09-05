@@ -13,14 +13,15 @@ import interactor.EstateMessage
 
 /**
  * Web page crawler actor
- * It receives only a url, and parses the downloaded page. It may contains other urls, and estate, which will be sent
- * the the EstateConsumer actor.
+ * It receives only a url, and parses the downloaded page
  */
-class EstateCrawler(estateConsumer: ActorRef) extends Actor with ActorLogging {
+class EstateCrawler(webPageConsumer: ActorRef) extends Actor with ActorLogging {
 
   def receive = {
-    case url: Url => parseUrl(url)
-    case _ =>
+    case url: Url => 
+      parseUrl(url)
+    case a:Any =>
+      log.error("Invalid message recieved! [" + a + "]")
   }
 
   /**
@@ -39,11 +40,10 @@ class EstateCrawler(estateConsumer: ActorRef) extends Actor with ActorLogging {
     log.debug("found " + urls.length + " urls")
     log.debug("found estate: " + realEstate.isDefined)
 
-    if (urls.length > 0)
-      estateConsumer ! UrlList(urls)
+    webPageConsumer ! UrlList(urls)
     
     if (realEstate.isDefined)
-      estateConsumer ! EstateMessage(realEstate.get)
+      webPageConsumer ! EstateMessage(realEstate.get)
   }
 
   def downloadWebPage[DOMAIN <: Domain](url: Url): WebPage[DOMAIN] = {

@@ -9,15 +9,13 @@ import akka.actor.ActorRef
 import akka.actor.Props
 import akka.routing.RoundRobinRouter
 import interactor.CrawlerStart
-import scala.concurrent.duration._
+import interactor.Ping
+import interactor.Pong
 
 /**
- * Estate producer actor, which delegates the parsing for the crawler actors
+ * Actor, which delegates the parsing for the crawler actors
  */
-sealed class EstateProducer(estateConsumer: ActorRef, crawlerStart: CrawlerStart) extends Actor with ActorLogging {
-  import context._ // implicit defs
-
-  val CHECK_PARSABLE_URL_COUNT = "checkParseableUrlCount"
+sealed class WebPageParserActor(estateConsumer: ActorRef, crawlerStart: CrawlerStart) extends Actor with ActorLogging {
 
   /* ******************************************************************************************************************
    * Actor state
@@ -33,9 +31,7 @@ sealed class EstateProducer(estateConsumer: ActorRef, crawlerStart: CrawlerStart
   val crawlers = createCrawlers(crawlerCount)
 
   log.info("EstateProducer created with " + crawlerCount + " crawlers")
-
   crawlerStart.baseUrls.foreach(f => parseUrl(f))
-  context.system.scheduler.scheduleOnce(10 seconds, self, CHECK_PARSABLE_URL_COUNT)
 
   /* ******************************************************************************************************************
    * Actor methods
@@ -44,20 +40,11 @@ sealed class EstateProducer(estateConsumer: ActorRef, crawlerStart: CrawlerStart
   def receive = {
     case url: Url =>
       parseUrl(url)
-
-    case CHECK_PARSABLE_URL_COUNT =>
-      if (recievedUrlsToParse == crawlerStart.baseUrls.length) {
-        log.info("No URLs recieved to parse, shutting down!")
-        context.system.shutdown
-      }
-
-    case "ready" =>
-      
-      log.info("*************READY?")
-      sender ! "yes"
-      
-    case _ =>
-      log.error("received unknown message")
+    case Ping =>
+      sender ! Pong
+    
+    case a:Any =>
+      log.error("Received unknown message! [" + a + "]")
   }
 
   def parseUrl(url: Url) = {
@@ -69,5 +56,7 @@ sealed class EstateProducer(estateConsumer: ActorRef, crawlerStart: CrawlerStart
   def createCrawlers(pcrawlerCount: Int) =
     context.actorOf(
       Props(new EstateCrawler(estateConsumer))
-        .withRouter(RoundRobinRouter(pcrawlerCount)), name = "EstateCrawler")
+      	.withDispatcher("crawler-actor-dispatcher")
+        .withRouter(RoundRobinRouter(pcrawlerCount)), name = "WebPageDownloader")
+        
 }

@@ -15,7 +15,7 @@ import interactor.EstateMessage
  * Saves to the database, and retrieve new urls which are not currently under processing. This actor is responsible for
  * keeping the currently processed urls consistent.
  */
-class EstateConsumer extends Actor with ActorLogging {
+class WebPageConsumerActor extends Actor with ActorLogging {
 
   def receive = {
     case url: Url => saveUrl(url)
