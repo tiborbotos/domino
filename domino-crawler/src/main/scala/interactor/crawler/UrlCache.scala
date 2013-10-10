@@ -13,33 +13,34 @@ object UrlCache {
 }
 
 class UrlCache {
-  private val urlMap = new HashMap[String, CacheElement]()// with Map[String, CacheElement]
-  
+  private val urlMap = new HashMap[String, CacheElement]() // with Map[String, CacheElement]
+
   def push(url: Url) {
     val old = urlMap.get(url.path)
     if (old.isDefined)
       old.get.found
-    else urlMap.put(url.path, CacheElement.createForUrl(url))
+    else urlMap.put(url.path, CacheElement.createCacheElementForUrl(url))
   }
 
   def pop: Option[Url] = {
     val reservationObsolate = UrlCache.RESERVATION_TTL.fromNow
-    
-    urlMap.find(
-        item => {
-          val cacheElement = item._2
-          (cacheElement.isReserved == false || 
-            (cacheElement.isReserved == true && cacheElement.getReservedUntil.get < reservationObsolate)) 
-      }
-    ).flatMap(a => Some(a._2.url))
+    urlMap.find(item => isValidCacheElement(item._2, reservationObsolate)).flatMap(a => Some(a._2.url))
   }
-  
+
+  def isValidCacheElement(cacheElement: CacheElement, reservationObsolate: Deadline): Boolean = {
+    (cacheElement.isReserved == false ||
+      (cacheElement.isReserved == true && cacheElement.getReservedUntil.get < reservationObsolate))
+  }
+
   private[crawler] def size = urlMap.size
   private[crawler] def clear = urlMap.clear
 }
 
+/**
+ * Helper companion object
+ */
 object CacheElement {
-  def createForUrl(url: Url):CacheElement = {
+  def createCacheElementForUrl(url: Url): CacheElement = {
     val elem = new CacheElement
     elem.pUrl = url
     return elem
@@ -49,9 +50,9 @@ object CacheElement {
 private[crawler] class CacheElement {
   private var pUrl: Url = null
   private var foundCount = 1
-  private var reservedUntil:Option[Deadline] = None
+  private var reservedUntil: Option[Deadline] = None
   private var reserved = false
-  
+
   def url = pUrl
   def found = foundCount += 1
   def isReserved = reserved

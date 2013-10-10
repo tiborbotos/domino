@@ -11,3 +11,6 @@ abstract class Domain(url: Url)
  */
 class DomainAlberletHu extends Domain(url = Url(path = DomainAlberletHu.path))
 object DomainAlberletHu { def path = "http://www.alberlet.hu" }
+
+class DomainLocalhost extends Domain(url = Url(path = DomainLocalhost.path))
+object DomainLocalhost { def path = "http://127.0.0.1:8080/estatelist" }

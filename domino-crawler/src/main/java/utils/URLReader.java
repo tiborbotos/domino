@@ -31,6 +31,7 @@ public class URLReader {
 			res = new String(out.toByteArray(), "UTF-8");
 		} catch (Exception ex) {
 			System.out.println("Exception while downloading=" + ex.getMessage());
+			ex.printStackTrace();
 			return "";
 		} finally {
 			try {

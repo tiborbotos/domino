@@ -15,7 +15,7 @@ import interactor.EstateMessage
  * Web page crawler actor
  * It receives only a url, and parses the downloaded page
  */
-class EstateCrawler(webPageConsumer: ActorRef) extends Actor with ActorLogging {
+class ParserActor(webPageConsumer: ActorRef) extends Actor with ActorLogging {
 
   def receive = {
     case url: Url => 
@@ -28,7 +28,7 @@ class EstateCrawler(webPageConsumer: ActorRef) extends Actor with ActorLogging {
    * Downloads the page, retrieves a WebPageParser instance, which result will be sent further
    */
   def parseUrl(url: Url) = {
-    log.info("parseUrl(url=%s)", url)
+    log.info("parseUrl(url=%1 $1 %s)", url)
     val page = downloadWebPage(url)
     log.debug("downloaded " + page.html.size + " bytes")
 

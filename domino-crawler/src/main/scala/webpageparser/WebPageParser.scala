@@ -5,6 +5,7 @@ import model.DomainAlberletHu
 import model.Url
 import model.estate.Estate
 import model.estate.WebPage
+import model.DomainLocalhost
 
 /**
  * Estate parser trait (domain specific)
@@ -25,6 +26,9 @@ object WebPageParser {
     page.url.path match {
       case url:String if (url == DomainAlberletHu.path) =>
         Some(new ParserAlberletHu(page.asInstanceOf[WebPage[DomainAlberletHu]]).asInstanceOf[WebPageParser[DOMAIN]])
+      
+      case url:String if (url == DomainLocalhost.path) =>
+        Some(new ParserTestLocalhost(page.asInstanceOf[WebPage[DomainLocalhost]]).asInstanceOf[WebPageParser[DOMAIN]])
       case _ => None
     }
   }

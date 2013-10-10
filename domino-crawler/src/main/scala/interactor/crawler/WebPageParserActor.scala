@@ -55,7 +55,7 @@ sealed class WebPageParserActor(estateConsumer: ActorRef, crawlerStart: CrawlerS
 
   def createCrawlers(pcrawlerCount: Int) =
     context.actorOf(
-      Props(new EstateCrawler(estateConsumer))
+      Props(new ParserActor(estateConsumer))
       	.withDispatcher("crawler-actor-dispatcher")
         .withRouter(RoundRobinRouter(pcrawlerCount)), name = "WebPageDownloader")
         
